@@ -9,8 +9,8 @@
 // Category: Technologies
 // Elements: 5
 
-// const categoriesEl = document.querySelector('#categories');
-const categoriesItemEl = document.querySelectorAll('li.item');
+const categoriesItemEl = document.querySelector('#categories').children;
+// const categoriesItemEl = document.querySelectorAll('li.item');
 
 const NumberCategoriesItemEl = categoriesItemEl.length;
 console.log('Number of categories:', NumberCategoriesItemEl);
