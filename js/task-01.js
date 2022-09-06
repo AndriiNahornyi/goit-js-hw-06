@@ -12,9 +12,10 @@
 
 const categoriesItemEl = document.querySelector('#categories').children;
 // const categoriesItemEl = document.querySelectorAll('li.item');
+console.log('Number of categories:', categoriesItemEl.length);
 
-const NumberCategoriesItemEl = categoriesItemEl.length;
-console.log('Number of categories:', NumberCategoriesItemEl);
+// const NumberCategoriesItemEl = categoriesItemEl.length;
+// console.log('Number of categories:', NumberCategoriesItemEl);
 
 for (const categoryItemEl of categoriesItemEl) {
     console.log('Category:', categoryItemEl.querySelector('h2').textContent);
