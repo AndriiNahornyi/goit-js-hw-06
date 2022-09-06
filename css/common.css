@@ -20,10 +20,10 @@ body {
   list-style: none;
 }
 
-.gallery__img {
+/* .gallery__img {
   height: 250px;
   width: auto;
-}
+} */
 
 input {
   padding: 8px;
