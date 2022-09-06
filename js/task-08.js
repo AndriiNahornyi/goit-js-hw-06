@@ -15,3 +15,23 @@
 // Якщо у формі є незаповнені поля, виводь alert з попередженням про те, що всі поля повинні бути заповнені.
 // Якщо користувач заповнив усі поля і відправив форму, збери значення полів в об'єкт, де ім'я поля буде ім'ям властивості, а значення поля - значенням властивості. Для доступу до елементів форми використовуй властивість elements.
 // Виведи об'єкт із введеними даними в консоль і очисти значення полів форми методом reset.
+
+const formInputEl = document.querySelector('.login-form');
+// console.log('formInputEl', formInputEl);
+formInputEl.addEventListener('submit', targetInputHandler);
+// console.log('formInputEl', formInputEl);
+function targetInputHandler(event) {
+    event.preventDefault();
+    // console.dir(event.currentTarget);
+    // console.dir(event.currentTarget.elements);
+    const { email, password } = event.currentTarget.elements;
+    if (!email.value || !password.value) {
+        alert('Fill in all fields, please!');
+    }
+    const userLoginData = {
+        email: email.value,
+        password: password.value,
+    }
+    console.dir(userLoginData);
+    event.currentTarget.reset();
+}
