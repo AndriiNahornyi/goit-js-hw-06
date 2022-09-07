@@ -25,12 +25,12 @@ function targetInputHandler(event) {
     // console.dir(event.currentTarget);
     // console.dir(event.currentTarget.elements);
     const { email, password } = event.currentTarget.elements;
-    if (!email.value || !password.value) {
+    if (!email.value.trim() || !password.value.trim()) {
         alert('Fill in all fields, please!');
     }
     const userLoginData = {
-        email: email.value,
-        password: password.value,
+        email: email.value.trim(),
+        password: password.value.trim(),
     }
     console.dir(userLoginData);
     event.currentTarget.reset();
