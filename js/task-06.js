@@ -17,17 +17,18 @@
 // #validation-input.invalid {
 //   border-color: #f44336;
 // }
+
 const validInputEl = document.querySelector('#validation-input');
 // console.log('validInputEl', validInputEl);
 validInputEl.addEventListener('blur', targetInputHandler);
 // console.log('validInputEl', validInputEl);
 function targetInputHandler (event) {
     if (event.target.value.length === Number(validInputEl.dataset.length)) {
-    updateClassEl('valid', 'invalid');
-        console.log('updateClassEl', updateClassEl);
+        updateClassEl('valid', 'invalid');
+    // console.log('updateClassEl', updateClassEl);
     } else {
-    updateClassEl('invalid', 'valid');
-        console.log('updateClassEl', updateClassEl);
+        updateClassEl('invalid', 'valid');
+    // console.log('updateClassEl', updateClassEl);
     }
 }
 function updateClassEl(addCl, remCl) {
