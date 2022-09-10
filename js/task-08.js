@@ -25,6 +25,7 @@ function targetInputHandler(event) {
     // console.dir(event.currentTarget);
     // console.dir(event.currentTarget.elements);
     const { email, password } = event.currentTarget.elements;
+    // console.log(event.currentTarget.elements);
     if (!email.value.trim() || !password.value.trim()) {
         alert('Fill in all fields, please!');
     }
